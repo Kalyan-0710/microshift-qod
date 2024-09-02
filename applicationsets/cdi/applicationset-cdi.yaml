@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: cdi
+  name: cdi1
   namespace: argocd
 spec:
   generators:
@@ -12,7 +12,7 @@ spec:
           argocd.argoproj.io/secret-type: cluster
   template:
     metadata:
-      name: "{{nameNormalized}}-cdi"
+      name: "{{nameNormalized}}-cdi1"
     spec:
       project: default
       source:
