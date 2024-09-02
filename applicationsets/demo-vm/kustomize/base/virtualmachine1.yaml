@@ -9,6 +9,8 @@ spec:
   dataVolumeTemplates:
   - metadata:
       name: demo-vm1-ds-fedora
+      lables:
+        app: httpd
     spec:
       sourceRef:
         kind: DataSource
@@ -17,9 +19,6 @@ spec:
       storage:
         resources: {}
   template:
-    metadata:
-      lables:
-        app: httpd
     spec:
       terminationGracePeriodSeconds: 180
       domain:
