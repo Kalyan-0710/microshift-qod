@@ -10,12 +10,17 @@ spec:
     spec:
       sourceRef:
         kind: DataSource
-        name: fedora-gui
-        namespace: demo-vm3
+        name: fedora
+        namespace: openshift-virtualization-os-images
       storage:
         resources: {}
   template:
+    metadata:
+      labels:
+        special: demo-vm2
     spec:
+      hostname: demo-vm2
+      subdomain: demo-vm2
       terminationGracePeriodSeconds: 180
       domain:
         devices:
