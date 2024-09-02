@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: demo-vm2
 spec:
- selector:
+  selector:
     expose: demo-vm2
   clusterIP: None
   ports:
