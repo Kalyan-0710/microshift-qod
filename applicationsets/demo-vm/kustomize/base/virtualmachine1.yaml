@@ -17,10 +17,11 @@ spec:
       storage:
         resources: {}
   template:
+  - metadata:
+      lables:
+        app: httpd
     spec:
       terminationGracePeriodSeconds: 180
-      labels:
-        app: httpd
       domain:
         devices:
           rng: {}
