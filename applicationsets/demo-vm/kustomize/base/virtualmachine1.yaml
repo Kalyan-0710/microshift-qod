@@ -17,7 +17,7 @@ spec:
       storage:
         resources: {}
   template:
-  - metadata:
+    metadata:
       lables:
         app: httpd
     spec:
