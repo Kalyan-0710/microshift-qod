@@ -25,10 +25,11 @@ spec:
       volumes:
       - dataVolume:
           name: demo-vm1-ds-fedora
-          - cloudInitNoCloud:
-      - userData: |-
+        name: demo-vm1-ds-fedora
+      - cloudInitNoCloud:
+          userData: |-
             #cloud-config
             user: fedora
             password: fedora
             chpasswd: { expire: False }
-        name: demo-vm1-ds-fedora
+        name: cloudinitdisk
