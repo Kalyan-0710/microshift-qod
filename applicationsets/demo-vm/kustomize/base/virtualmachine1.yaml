@@ -17,6 +17,9 @@ spec:
       storage:
         resources: {}
   template:
+    metadata:
+      labels:
+        special: httpd
     spec:
       terminationGracePeriodSeconds: 180
       domain:
