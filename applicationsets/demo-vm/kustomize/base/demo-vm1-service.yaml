@@ -4,7 +4,7 @@ metadata:
   name: demo-vm1
 spec:
   selector:
-    special: demo-vm1
+    expose: demo-vm1
   clusterIP: None
   ports:
     - protocol: TCP
