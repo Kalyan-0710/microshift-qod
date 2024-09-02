@@ -32,4 +32,4 @@ spec:
             user: fedora
             password: fedora
             chpasswd: { expire: False }
-        name: demo-vm2-ds-fedora
+        name: cloudinitdisk
