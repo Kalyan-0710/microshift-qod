@@ -19,6 +19,8 @@ spec:
   template:
     spec:
       terminationGracePeriodSeconds: 180
+      labels:
+        app: httpd
       domain:
         devices:
           rng: {}
