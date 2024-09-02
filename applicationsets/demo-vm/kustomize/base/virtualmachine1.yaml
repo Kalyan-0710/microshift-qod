@@ -16,10 +16,7 @@ spec:
         namespace: openshift-virtualization-os-images
       storage:
         resources: {}
-  - template:
-      metadata:
-        label:
-          app: httpd
+  template:
     spec:
       terminationGracePeriodSeconds: 180
       domain:
