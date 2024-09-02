@@ -5,3 +5,4 @@ resources:
   - virtualmachine1.yaml
   - virtualmachine2.yaml
   - httpd-vm1.yaml
+  - virtualmachine3.yaml
