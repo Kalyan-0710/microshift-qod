@@ -23,7 +23,7 @@ spec:
             managed-cluster: "{{nameNormalized}}"
       destination:
         server: "{{server}}"
-        namespace: demo-vm
+        namespace: "{{nameNormalized}}-demo-vm"
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
