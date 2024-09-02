@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: demo-vm
+spec:
+  selector:
+    expose: demo-vm1
+  clusterIP: None
+  ports:
+    - protocol: TCP
+      port: 1234
+      targetPort: 1234
