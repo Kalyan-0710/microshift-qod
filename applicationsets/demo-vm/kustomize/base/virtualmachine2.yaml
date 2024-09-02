@@ -25,8 +25,9 @@ spec:
       volumes:
       - dataVolume:
           name: demo-vm2-ds-fedora
-          - cloudInitNoCloud:
-      - userData: |-
+        name: demo-vm2-ds-fedora
+      - cloudInitNoCloud:
+          userData: |-
             #cloud-config
             user: fedora
             password: fedora
