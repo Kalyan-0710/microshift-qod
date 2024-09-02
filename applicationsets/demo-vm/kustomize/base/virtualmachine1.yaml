@@ -16,8 +16,8 @@ spec:
         namespace: openshift-virtualization-os-images
       storage:
         resources: {}
-  template:
-    metadata:
+  - template:
+      metadata:
         label:
           app: httpd
     spec:
