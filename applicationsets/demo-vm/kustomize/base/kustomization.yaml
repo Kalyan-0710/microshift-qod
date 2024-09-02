@@ -5,4 +5,6 @@ resources:
   - virtualmachine1.yaml
   - virtualmachine2.yaml
   - virtualmachine3.yaml
-  - demo-vm-service.yaml
+  - demo-vm1-service.yaml
+  - demo-vm2-service.yaml
+  - demo-vm3-service.yaml
