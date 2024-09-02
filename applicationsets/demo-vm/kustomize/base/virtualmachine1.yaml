@@ -22,7 +22,7 @@ spec:
         special: demo-vm1
     spec:
       hostname: demo-vm1
-      subdomain: demo-vm
+      subdomain: demo-vm1
       terminationGracePeriodSeconds: 180
       domain:
         devices:
