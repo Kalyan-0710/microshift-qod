@@ -19,7 +19,7 @@ spec:
   template:
     metadata:
       labels:
-        special: demo-vm1
+        expose: demo-vm1
     spec:
       hostname: demo-vm1
       subdomain: demo-vm1
