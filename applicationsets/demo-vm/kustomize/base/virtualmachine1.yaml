@@ -39,4 +39,5 @@ spec:
             user: fedora
             password: fedora
             chpasswd: { expire: False }
+            ssh_pwauth: True
         name: cloudinitdisk
