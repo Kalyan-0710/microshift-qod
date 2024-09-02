@@ -17,7 +17,7 @@ spec:
       source:
         repoURL: https://github.com/Kalyan-0710/gitops-demo-acm.git
         targetRevision: HEAD
-        path: "applicationsets/demo-vm/kustomize/dev"
+        path: "applicationsets/demo-vm/kustomize/{{metadata.labels.env}}"
         kustomize:
           commonAnnotations:
             managed-cluster: "{{nameNormalized}}"
