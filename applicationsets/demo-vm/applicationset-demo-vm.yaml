@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: demo-vm3
+  name: demo-vm
 spec:
   generators:
   # Only select external clusters, excludes local cluster
@@ -23,7 +23,7 @@ spec:
             managed-cluster: "{{nameNormalized}}"
       destination:
         server: "{{server}}"
-        namespace: demo-vm-3
+        namespace: demo-vm
       syncPolicy:
         syncOptions:
         - CreateNamespace=true
