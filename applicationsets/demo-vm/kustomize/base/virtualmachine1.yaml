@@ -2,6 +2,8 @@ apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
   name: demo-vm1
+  labels:
+    app: httpd
 spec:
   running: true
   dataVolumeTemplates:
