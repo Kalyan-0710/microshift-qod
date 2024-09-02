@@ -20,7 +20,7 @@ spec:
         expose: demo-vm2
     spec:
       hostname: demo-vm2
-      subdomain: demo-vm2
+      subdomain: demo-vm
       terminationGracePeriodSeconds: 180
       domain:
         devices:
