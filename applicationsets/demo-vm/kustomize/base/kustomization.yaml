@@ -3,6 +3,8 @@ kind: Kustomization
 
 resources:
   - virtualmachine1.yaml
+  - demo-vm1-service.yaml
   - virtualmachine2.yaml
-  - httpd-vm1.yaml
+  - demo-vm2-service.yaml
   - virtualmachine3.yaml
+  - demo-vm3-service.yaml
