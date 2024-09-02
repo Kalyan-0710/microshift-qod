@@ -15,7 +15,12 @@ spec:
       storage:
         resources: {}
   template:
+    metadata:
+      labels:
+        special: demo-vm3
     spec:
+      hostname: demo-vm3
+      subdomain: demo-vm3
       terminationGracePeriodSeconds: 180
       domain:
         devices:
