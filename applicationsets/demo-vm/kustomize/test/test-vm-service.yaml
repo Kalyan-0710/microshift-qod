@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: test-vm
+  name: demo-vm1
 spec:
   selector:
-    expose: test-vm
+    expose: demo-vm1
   clusterIP: None
   ports:
     - protocol: TCP
