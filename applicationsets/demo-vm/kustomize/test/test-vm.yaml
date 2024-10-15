@@ -1,15 +1,14 @@
-
 apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
-  name: test-vm
+  name: demo-vm1
   labels:
     app: httpd
 spec:
   running: true
   dataVolumeTemplates:
   - metadata:
-      name: test-vm-ds-fedora
+      name: demo-vm1-ds-fedora
     spec:
       sourceRef:
         kind: DataSource
@@ -20,10 +19,10 @@ spec:
   template:
     metadata:
       labels:
-        expose: test-vm
+        expose: demo-vm1
     spec:
-      hostname: test-vm
-      subdomain: test-vm
+      hostname: demo-vm1
+      subdomain: demo-vm1
       terminationGracePeriodSeconds: 180
       domain:
         devices:
@@ -32,8 +31,8 @@ spec:
           guest: 1024M
       volumes:
       - dataVolume:
-          name: test-vm-ds-fedora
-        name: test-vm-ds-fedora
+          name: demo-vm1-ds-fedora
+        name: demo-vm1-ds-fedora
       - cloudInitNoCloud:
           userData: |-
             #cloud-config
