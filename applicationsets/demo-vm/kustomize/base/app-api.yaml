@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 metadata:
   name: qod-api
-    labels:
+  labels:
     app: qod-api
     app.kubernetes.io/component: qod-api
     app.kubernetes.io/instance: qod-api
