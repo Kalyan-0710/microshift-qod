@@ -3,7 +3,7 @@ kind: Kustomization
 
 resources:
   - mysql-vm.yaml
-  - mysql-vm.yaml
+  - mysql-vm-service.yaml
   - app-api.yaml
   - app-api-service.yaml
   - qod-db-credentials
