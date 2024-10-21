@@ -22,7 +22,6 @@ spec:
     spec:
       containers:
         - name: qod-api
-          image: 'image-registry.openshift-image-registry.svc:5000/three-tier/qod-api:latest'
           envFrom:
             - secretRef:
                 name: qod-db-credentials
