@@ -4,3 +4,5 @@ kind: Kustomization
 resources:
   - virtualmachine1.yaml
   - demo-vm1-service.yaml
+  - app-api.yaml
+  - app-api-service.yaml
