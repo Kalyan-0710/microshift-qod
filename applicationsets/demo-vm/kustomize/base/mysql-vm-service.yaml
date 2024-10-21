@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: demo-vm1
+  name: mysql-vm
 spec:
   selector:
-    expose: demo-vm1
+    expose: mysql-vm
   clusterIP: None
   ports:
     - protocol: TCP
