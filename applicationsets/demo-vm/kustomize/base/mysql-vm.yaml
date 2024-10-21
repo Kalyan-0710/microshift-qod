@@ -77,6 +77,6 @@ spec:
             userData: |-
               #cloud-config
               user: cloud-user
-              password: mysql123
+              password: tken-fymv-ibhw
               chpasswd: { expire: False }
           name: cloudinitdisk
