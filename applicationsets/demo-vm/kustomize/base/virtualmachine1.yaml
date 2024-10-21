@@ -1,43 +1,83 @@
-apiVersion: kubevirt.io/v1
+﻿apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
-  name: demo-vm1
+  name: mysql-vm
   labels:
-    app: httpd
+    app: mysql-vm
 spec:
-  running: true
   dataVolumeTemplates:
-  - metadata:
-      name: demo-vm1-ds-fedora
-    spec:
-      sourceRef:
-        kind: DataSource
-        name: fedora
-        namespace: openshift-virtualization-os-images
-      storage:
-        resources: {}
+    - apiVersion: cdi.kubevirt.io/v1beta1
+      kind: DataVolume
+      metadata:
+        creationTimestamp: null
+        name: mysql-vm
+      spec:
+        sourceRef:
+          kind: DataSource
+          name: mysql-vm-bv
+          namespace: openshift-virtualization-os-images
+        storage:
+          resources:
+            requests:
+              storage: 30Gi
+  running: true
   template:
     metadata:
+      annotations:
+        vm.kubevirt.io/flavor: small
+        vm.kubevirt.io/os: rhel9
+        vm.kubevirt.io/workload: server
+      creationTimestamp: null
       labels:
-        expose: demo-vm1
+        expose: mysql-vm
+        kubevirt.io/domain: mysql-vm
+        kubevirt.io/size: small
+        network.kubevirt.io/headlessService: headless
     spec:
-      hostname: demo-vm1
-      subdomain: demo-vm1
-      terminationGracePeriodSeconds: 180
+      architecture: amd64
       domain:
+        cpu:
+          cores: 1
+          sockets: 1
+          threads: 1
         devices:
+          disks:
+            - disk:
+                bus: virtio
+              name: rootdisk
+            - disk:
+                bus: virtio
+              name: cloudinitdisk
+          interfaces:
+            - macAddress: '02:23:d2:00:00:03'
+              masquerade: {}
+              model: virtio
+              name: default
           rng: {}
+        features:
+          acpi: {}
+          smm:
+            enabled: true
+        firmware:
+          bootloader:
+            efi: {}
+        machine:
+          type: pc-q35-rhel9.4.0
         memory:
-          guest: 1024M
+          guest: 2Gi
+        resources: {}
+      networks:
+        - name: default
+          pod: {}
+      terminationGracePeriodSeconds: 180
       volumes:
-      - dataVolume:
-          name: demo-vm1-ds-fedora
-        name: demo-vm1-ds-fedora
-      - cloudInitNoCloud:
-          userData: |-
-            #cloud-config
-            user: fedora
-            password: fedora
-            chpasswd: { expire: False }
-            ssh_pwauth: True
-        name: cloudinitdisk
+        - dataVolume:
+            name: mysql-vm
+          name: rootdisk
+        - cloudInitNoCloud:
+            userData: |-
+              #cloud-config
+              user: cloud-user
+              password: mysql123
+              chpasswd: { expire: False }
+          name: cloudinitdisk
