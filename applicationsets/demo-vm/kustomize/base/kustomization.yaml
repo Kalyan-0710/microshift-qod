@@ -7,4 +7,6 @@ resources:
   - app-api.yaml
   - app-api-service.yaml
   - qod-db-credentials
-  - image-puller-crb.yaml
+  - app-web.yaml
+  - app-web-route.yaml
+  - app-web-service.yaml
