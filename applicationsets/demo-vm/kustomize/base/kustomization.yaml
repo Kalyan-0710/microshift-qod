@@ -11,4 +11,3 @@ resources:
   - app-web-route.yaml
   - app-web-service.yaml
   - qod-api-buildconfig.yaml
-  - qod-api-buildrequest.yaml
