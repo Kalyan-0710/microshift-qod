@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: qod-web
-          image: 'image-registry.openshift-image-registry.svc:5000/three-tier/qod-web@sha256:149a0298d37e2275d93825548271e183cfe318a7b82c24d2b0cd0971092440ee'
+          image: 'docker.com/kalyan1981/qod-web:latest'
           env:
             - name: QOD_API_URL
               value: 'http://qod-api:8080'
