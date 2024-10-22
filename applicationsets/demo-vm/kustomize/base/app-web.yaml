@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: qod-web
-          image: 'docker.com/kalyan1981/qod-web:latest'
+          image: 'docker.io/kalyan1981/qod-web:latest'
           env:
             - name: QOD_API_URL
               value: 'http://qod-api:8080'
