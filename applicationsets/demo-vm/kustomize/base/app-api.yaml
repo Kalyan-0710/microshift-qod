@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: qod-api
-          image: 'docker.com/kalyan1981/qod-api:latest'
+          image: 'docker.io/kalyan1981/qod-api:latest'
           envFrom:
             - secretRef:
                 name: qod-db-credentials
