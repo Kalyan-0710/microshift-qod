@@ -6,5 +6,4 @@ resources:
   - app-api-service.yaml
   - qod-db-credentials
   - app-web.yaml
-  - app-web-route.yaml
   - app-web-service.yaml
